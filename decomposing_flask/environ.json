@@ -1,0 +1,23 @@
+{
+    'wsgi.version': (1, 0)
+  , 'wsgi.url_scheme': 'http'
+  , 'wsgi.input': <_io.BufferedReader name=8>
+  , 'wsgi.errors':<_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>
+  , 'wsgi.multithread': False
+  , 'wsgi.multiprocess': False
+  , 'wsgi.run_once': False
+  , 'werkzeug.server.shutdown': <function WSGIRequestHandler.make_environ.<locals>.shutdown_server at 0x10ffc7f28>
+  , 'SERVER_SOFTWARE': 'Werkzeug/0.12.2'
+  , 'REQUEST_METHOD': 'GET'
+  , 'SCRIPT_NAME': ''
+  , 'PATH_INFO': '/api'
+  , 'QUERY_STRING': ''
+  , 'REMOTE_ADDR': '127.0.0.1'
+  , 'REMOTE_PORT': 55672
+  , 'SERVER_NAME': '127.0.0.1'
+  , 'SERVER_PORT': '5000'
+  , 'SERVER_PROTOCOL': 'HTTP/1.1'
+  , 'HTTP_HOST': 'localhost:5000'
+  , 'HTTP_USER_AGENT': 'curl/7.52.1'
+  , 'HTTP_ACCEPT': '*/*'
+}

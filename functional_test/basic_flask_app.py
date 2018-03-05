@@ -5,9 +5,11 @@ from werkzeug.routing import BaseConverter, ValidationError
 class RegisteredUser(BaseConverter):
     """ This subclass of werkzeug """
     def to_python(self, value):
-        print("\n\nin RegisteredUser.to_python with value: " + value)
+        print("\n\nin RegisteredUser.to_python with value", end=": ")
+        print(value)
         if value in _USERS:
-            print("in RegisteredUser.to_python with _USERS[value]: " + _USERS[value])
+            print("in RegisteredUser.to_python with _USERS[value]", end=": ")
+            print(_USERS[value])
             return _USERS[value]
         raise ValidationError()
 
@@ -28,14 +30,14 @@ _IDS = {val: id for id, val in _USERS.items()}
 
 @app.route('/api')
 def my_microservice():
-    print("Here is the request:")
+    print("Here is the request:", end="\n")
     print(request)
-    print("\nHere is the environment:")
+    print("\nHere is the environment:", end="\n")
     print(request.environ)
-    print("\nHere is the response")
+    print("\nHere is the response", end="\n")
     response = jsonify({'Hello': 'World!'})
     print(response)
-    print("\nHere is the response data")
+    print("\nHere is the response data", end="\n")
     print(response.data)
     return response
 
