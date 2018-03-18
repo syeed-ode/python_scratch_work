@@ -1,8 +1,16 @@
 """
     This class demonstrates that use of a dictionary instead of fields
-    are better when the situation requires "dynamic" bookkeeping.
+    is preferred when the situation requires "dynamic" bookkeeping.
 
     'Dynamic' means an unexpected set of identifiers.
+
+    #
+    # for an unexpected amount of identifiers ('dynamic' bookkeeping) -- utilize
+    # dictionary instead of fields.
+    #
+    # Avoid more than one layer of nesting.
+    # break out the inner dictionary into classes.
+    #
 """
 
 
