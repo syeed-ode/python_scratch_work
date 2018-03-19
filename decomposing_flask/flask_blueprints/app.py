@@ -3,7 +3,8 @@
     to regiser the team Blueprint with the main module.
 """
 from flask import Flask
-from decomposing_flask.flask_teams_blueprint import teams
+
+from decomposing_flask.flask_blueprints.flask_teams_blueprint import teams
 
 app = Flask(__name__)
 
