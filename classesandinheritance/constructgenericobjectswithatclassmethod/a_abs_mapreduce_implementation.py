@@ -12,6 +12,9 @@ class Worker(object):
     """
         This is an abstract class for implementing a MapReduce Implementation.
         This class consumes the input data in a standard way.
+
+        input_data gets populated when the constructor gets created in
+        c_fnct_to_coordinate_non_polymphc_mapreduce.create_workers() method.
     """
     def __init__(self, input_data):
         self.input_data = input_data

@@ -12,6 +12,10 @@ class GenericInputData(object):
         This class extends the 'InputData' class by adding a class method that's
         responsible for creating new InputData instances. The class now has a
         common interface.
+
+        Previously the c_fnct_to_coordinate_non_polymphc_mapreduce module
+        defined the generate_input method and the mapreduce() function references
+        it.
     """
     def read(self):
         raise NotImplementedError
@@ -37,7 +41,7 @@ class GenericWorker(object):
     def create_workers(cls, input_class, config):
         """
             This method replaces c_fnct_to_coordinate_non_polymphc_mapreduce
-            module's create_workers. That modules create_workers was dependent
+            module's create_workers. That module's create_workers was dependent
             upon WorkersLineCountWorker. This create_workers is completely
             generic. It uses cls to construct instances instead of
             WorkersLineCountWorker's __init__ method.
@@ -48,7 +52,7 @@ class GenericWorker(object):
 
             input_class.generate_inputs shows how to utilize class polymorphism.
 
-            cls provids an alternate way to construct 'GenericWorker' objects
+            cls provides an alternate way to construct 'GenericWorker' objects
             besides using the __init__ method directly. cls constructs concrete
             subclass instances of the GenericWorker class.
 
@@ -65,3 +69,9 @@ class GenericWorker(object):
         for input_data in input_class.generate_inputs(config):
             workers.append(cls(input_data))
         return workers
+
+
+
+
+
+

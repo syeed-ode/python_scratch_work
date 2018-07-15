@@ -28,8 +28,11 @@ class PathInputDataGenericized(GenericInputData):
             direct contrast to the c_fnct_to_coordinate_non_polymphc_mapreduce
             module's generate_inputs.
 
-            This @classmethod implementation allows our genate_input operation to
+            This @classmethod implementation allows our generate_inputs operation to
             be generic for any client.
+
+            It is called by the d_abs_mr_impl_with_generic_clsmethod module's
+            create_workers(), which is also an @classmethod.
 
             :param config:
                    A dictionary with a set of configuration parameters. It is used to

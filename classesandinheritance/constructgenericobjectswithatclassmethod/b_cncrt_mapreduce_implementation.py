@@ -3,7 +3,11 @@ from classesandinheritance.constructgenericobjectswithatclassmethod.a_abs_mapred
 
 class PathInputData(InputData):
     """
-        This is a concrete subclass of 'InputData' that reads data from a file on disk
+        This is a concrete subclass of 'InputData' that reads data from a file on disk.
+
+        The c_fnct_to_coordinate_non_polymphc_mapreduce module defines the
+        generate_input method which creates PathInputData instances in a specific
+        (non-generic) way.
     """
     def __init__(self, path, name):
         super().__init__()

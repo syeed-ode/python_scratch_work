@@ -42,13 +42,13 @@ def create_workers(input_lists) -> 'List[WorkersLineCountWorker]':
                as an input to this field.
         :return: array of lineCounterWorkers
     """
-    print('In create_workers with a generator (not sure how to prent without exhausting it yet)')
+    print('In create_workers with a generator (not sure how to print without exhausting it yet)')
     print('In create_workers still. Just remembered for a method signature create_workers(input_lists)'
           , ', no generator exists until you actually call the generator for the first time.')
     workers = []
     for input_data in input_lists:
         workers.append(WorkersLineCountWorker(input_data))
-    print('In create_workers created the generator by intereacting with input_lists like this:'
+    print('In create_workers created the generator by interacting with input_lists like this:'
           , 'for input_data in input_lists: workers.append(LineCountWorker(input_data))'
           , 'this made a list of workers: \n\t'
           , workers)
